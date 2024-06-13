@@ -1,0 +1,155 @@
+/* *, *::after, *::before{
+    box-sizing: borderbox;
+}
+body{
+    margin:0;
+}
+
+:root{
+    --cell-size:100px;
+    --mark-size:cal(var(--cel-size) * .9);
+}
+
+.mainboard{
+    width: 100vh;
+    height:100vh;
+    display:grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(3 auto);
+    justify-items: center;
+    align-items: center;
+}
+.field{
+    width:100px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.field:first-child,
+.field:nth-child(2),
+.field:nth-child(3) {
+    border-left:none;
+}
+
+.cell:nth-child(3n + 1) {
+    border-left: none;
+}
+
+.cell:nth-child(3n + 3) {
+    border-right: none;
+}
+
+.field:last-child,
+.field:last-child(8),
+.field:last-child(7){
+    border-bottom: none;
+} */
+body {
+	background-color: #e0e4cc;
+	font-family: "Montserrat", sans-serif;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+table {
+	width: 75%;
+    margin:0 auto;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+	margin-top: 20px;
+	font-family: "Arimo", sans-serif;
+	font-size: 70px;
+}
+
+td {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	line-height: 80px;
+	background-color: #760c0c ;
+	color: white;
+	border: none;
+	border-radius: 10%;
+	box-shadow: 0 0.03em 0.08em rgba(0, 0, 0, 0.5);
+	margin: 8px;
+	transition: background-color 0.2s ease;
+    
+}
+
+td:hover {
+	cursor: pointer;
+	background-color: #F2D6CE;
+}
+
+.selected {
+	background-color: #F2D6CE;
+}
+
+tr {
+	list-style-type: none;
+	width: 500px;
+}
+
+#selection {
+	height: 60px;
+	font-size: 1.5em;
+}
+
+.spot{ 
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+      margin: 0 auto;
+} 
+
+button {
+	border: none;
+	background: transparent;
+	width: 50px;
+	height: 50px;
+	margin: 0.3em;
+	border-radius: 50%;
+}
+
+.hover:hover {
+	background: #760c0c;
+	color: white;
+}
+
+:active {
+	outline: none;
+}
+
+:focus {
+	outline: none;
+}
+
+.seed {
+	background: #760c0c;
+	color: white;
+}
+
+#result {
+	padding-top: 20px;
+	height: 40px;
+	font-size: 1.5em;
+}
+
+@media only screen and (min-device-width: 1000px) {
+	td {
+		width: 120px;
+		height: 120px;
+		line-height: 120px;
+		font-size: 120px;
+	}
+}
